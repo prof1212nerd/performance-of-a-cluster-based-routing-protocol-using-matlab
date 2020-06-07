@@ -1,0 +1,14 @@
+load('spots_num.mat');
+plot(t,average_throughput(time));
+[pks,locs]=findpeaks(average_throughput(time));
+plot(t(locs),pks,'or')
+shg
+hold on;plot(t,average_throughput(time));
+shg
+
+plot(t,average_throughput(time));
+stem(t,average_throughput(time));
+title('CBLTR protocol with fitting')
+xlabel('simulation time(seconds)')
+ylabel('Average throughput')
+         
